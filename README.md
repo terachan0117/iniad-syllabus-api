@@ -89,9 +89,13 @@
 |`terachan:syllabusNo`|シラバス番号|`object`
 
 
-シラバスには、シラバス番号を組み合わせた以下のURLでアクセスできます。シラバス番号が`null`の言語は、その言語でのシラバスが存在しません。
-* 日本語 `https://g-sys.toyo.ac.jp/syllabus/html/gakugai/{terachan:courseYear}/{terachan:courseYear}_{terachan:syllabusNo["ja"]}.html`
-* 英語 `https://g-sys.toyo.ac.jp/syllabus/html/gakugai/{terachan:courseYear}/{terachan:courseYear}_{terachan:syllabusNo["en"]}_en.html`
+詳細なシラバスには、シラバス番号を組み合わせた以下のURLでアクセスできます。シラバス番号が`null`の言語には、その言語でのシラバスが存在しません。
+
+* 日本語
+`https://g-sys.toyo.ac.jp/syllabus/html/gakugai/{terachan:courseYear}/{terachan:courseYear}_{terachan:syllabusNo["ja"]}.html`
+
+* 英語
+`https://g-sys.toyo.ac.jp/syllabus/html/gakugai/{terachan:courseYear}/{terachan:courseYear}_{terachan:syllabusNo["en"]}_en.html`
 
 # Note
 本APIは、東洋大学及び東洋大学情報連携学部が公式に提供しているものではありません。
