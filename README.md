@@ -67,7 +67,8 @@
 
 ## Definition
 * それぞれのデータは、`Object`形式で表現されます。
-* 値がない場合、`null`が入ります。
+* 出力される結果は、`Object`の`Array`で表現されます。
+* それぞれのデータの`key`に対応する`value`が存在しない場合は、`null`が入ります。
 
 | Name | Description | Schema
 | ---- | ---- | ---- |
@@ -88,7 +89,7 @@
 |`terachan:syllabusNo`|シラバス番号|`object`
 
 
-シラバスには、シラバス番号を組み合わせた以下のURLでアクセスできます。シラバス番号が`null`の言語には、シラバスが存在しません。
+シラバスには、シラバス番号を組み合わせた以下のURLでアクセスできます。シラバス番号が`null`の言語は、その言語でのシラバスが存在しません。
 * 日本語 `https://g-sys.toyo.ac.jp/syllabus/html/gakugai/{terachan:courseYear}/{terachan:courseYear}_{terachan:syllabusNo["ja"]}.html`
 * 英語 `https://g-sys.toyo.ac.jp/syllabus/html/gakugai/{terachan:courseYear}/{terachan:courseYear}_{terachan:syllabusNo["en"]}_en.html`
 
