@@ -83,7 +83,7 @@
 |`terachan:coursePeriod`|開講時限|`array`
 |`terachan:courseLanguage`|主たる使用言語。"Japanese"：日本語, "English"：英語, "Other Languages"：ドイツ語、フランス語、中国語、韓国語（ハングル）, "Foreign Language Course"：言語の習得を目的とした科目|`string`
 |`terachan:courseStudyYear`|対象年次|`object`
-|`terachan:instructorName`|教員名（多言語対応）。担当者未決定の場合は空のarray|`array`
+|`terachan:instructorName`|教員名（多言語対応）。担当者未決定の場合は空の`Array`|`array`
 |`terachan:instructorType`|教員実務経験種別。"A"：担当教員の実務経験を活かした、実践的教育を行っている科目, "B"：企業等の外部講師を招いてオムニバスなどで実施している科目, "C"：学外のインターンシップ、実習などを授業の中心に位置づけている科目|`string`
 |`terachan:syllabusNo`|シラバス番号|`object`
 
