@@ -88,7 +88,7 @@
 |`terachan:syllabusNo`|シラバス番号|`object`
 
 
-シラバスには以下のURLでアクセスできます。`null`の場合は、シラバスが存在しません。
+シラバスには、シラバス番号を組み合わせた以下のURLでアクセスできます。シラバス番号が`null`の言語には、シラバスが存在しません。
 * 日本語 `https://g-sys.toyo.ac.jp/syllabus/html/gakugai/{terachan:courseYear}/{terachan:courseYear}_{terachan:syllabusNo["ja"]}.html`
 * 英語 `https://g-sys.toyo.ac.jp/syllabus/html/gakugai/{terachan:courseYear}/{terachan:courseYear}_{terachan:syllabusNo["en"]}_en.html`
 
