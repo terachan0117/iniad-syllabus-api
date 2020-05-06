@@ -7,7 +7,8 @@ import re
 import json
 
 # 取得するシラバスの年度
-year = datetime.datetime.now().strftime("%Y")
+#year = datetime.datetime.now().strftime("%Y")
+year="2017"
 
 # Seleniumオプション設定
 options = webdriver.ChromeOptions()
@@ -117,8 +118,8 @@ for i in range(total):
     courseStudyYear = driver.find_element_by_xpath(
         xpath + "/td[6]").get_attribute("innerText")
     studyYear = []
-    for y in range(int(courseStudyYear[-1])):
-        studyYear.append(y+1)
+    for y in range(int(courseStudyYear[0]), int(courseStudyYear[-1])+1):
+        studyYear.append(y)
     obj["terachan:courseStudyYear"] = studyYear
 
     # 教員名
