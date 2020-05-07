@@ -7,8 +7,7 @@ import re
 import json
 
 # 取得するシラバスの年度
-#year = datetime.datetime.now().strftime("%Y")
-year="2017"
+year = datetime.datetime.now().strftime("%Y")"
 
 # Seleniumオプション設定
 options = webdriver.ChromeOptions()
