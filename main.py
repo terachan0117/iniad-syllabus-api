@@ -8,6 +8,7 @@ import json
 
 # 取得するシラバスの年度
 year = datetime.datetime.now().strftime("%Y")
+print("Search Year : ", year)
 
 # Seleniumオプション設定
 options = webdriver.ChromeOptions()
@@ -51,6 +52,7 @@ time.sleep(3)
 # 検索結果の該当件数
 total = int(re.findall(r"\d+", driver.find_element_by_xpath(
     "/html/body/div[3]/div/div/div/div[1]").get_attribute("innerText"))[1])
+print("Search Results : ", total)
 
 # 追加していくためのJSON
 result = []
@@ -152,13 +154,17 @@ for i in range(total):
     if len(syllabusNoEn) != 0:
         q = re.findall(r'\d+', syllabusNoEn[0].get_attribute("onclick"))
         obj["terachan:syllabusNo"]["en"] = int(q[1])
-
+    
     # JSONに追加
+    print("Adding number :", i)
     result.append(obj)
 
 # ファイルに保存
+print("Saving to file")
 df = open("./data/"+year+"/syllabus.json", "w",  encoding="utf-8")
 json.dump(result, df, ensure_ascii=False)
 
 # Chromeドライバ終了
 driver.quit()
+
+print("Done!!")
