@@ -104,9 +104,9 @@ for i in range(total):
     courseTime = driver.find_element_by_xpath(
         xpath + "/td[5]").get_attribute("innerText").splitlines()
     if len(courseTime) == 2:
-        if courseTime[1].split(",")[0] != "None" and courseTime[1].split(",")[1] != "Intensive":
+        if courseTime[1].split(",")[0] != "None" and courseTime[1].split(",")[0] != "Intensive" and courseTime[1].split(",")[0] != "Undecided":
             obj["terachan:courseWeek"] = courseTime[1].split(",")[0]
-        if courseTime[1].split(",")[1] != "None" and courseTime[1].split(",")[1] != "Intensive":
+        if courseTime[1].split(",")[1] != "None" and courseTime[1].split(",")[1] != "Intensive" and courseTime[1].split(",")[0] != "Undecided":
             obj["terachan:coursePeriod"] = int(courseTime[1].split(",")[1][0])
 
     # 主たる使用言語
